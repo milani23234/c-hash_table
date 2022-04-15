@@ -96,16 +96,6 @@ void* hash_table_create(hash_table* table, size_t key_size, size_t value_size, s
 void hash_table_delete(hash_table* table);
 
 /**
- * @brief Set the function used when hashing
- */
-void hash_table_set_hash(hash_table* table, size_t (*hash_function)(void*));
-
-/**
- * @brief Set the function used when comparing keys
- */
-void hash_table_set_compare(hash_table* table, int (*compare_function)(void*, void*, size_t));
-
-/**
  * @brief Insert a value into the table mapped to the key.
  * 
  * @return void* If the insertion is successfull, a pointer to the table, otherwise NULL.

@@ -1,7 +1,9 @@
-#include "hash_table.h"
-#include <stdlib.h>
-#include <stdio.h>
 
+# c-hash_table
+### A generic hash table in C
+
+Example:
+```c
 int main()
 {
    hash_table ht;
@@ -29,3 +31,14 @@ int main()
    // Frees the table
    hash_table_delete(&ht);
 }
+```
+
+By default string hash and compare functions are used, if you wish to use integer instead do the following:
+```c
+hash_table ht;
+
+// Adjust the table to use integer keys
+ht.compare_function = compare_integer;
+ht.hash_function = hash_integer;
+```
+Alternatively you can provide your own functions for custom data types.

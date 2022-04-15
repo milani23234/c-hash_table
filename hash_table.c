@@ -90,16 +90,6 @@ void hash_table_delete(hash_table* table)
    free(table->buckets);
 }
 
-void hash_table_set_hash(hash_table* table, size_t (*hash_function)(void*))
-{
-   table->hash_function = hash_function;
-}
-
-void hash_table_set_compare(hash_table* table, int (*compare_function)(void*, void*, size_t))
-{
-   table->compare_function = compare_function;
-}
-
 void* hash_table_insert(hash_table* table, void* key, void* value)
 {
    if (table->size >= table->capacity * RESIZE_THREESHOLD)
