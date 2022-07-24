@@ -1,6 +1,7 @@
 
 # c-hash_table
 ### A generic hash table in C
+To handle collisions this implementation uses chaining with a normal linked list. This is not so fast but memory efficient.
 
 Example:
 ```c
